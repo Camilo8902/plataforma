@@ -134,7 +134,7 @@
   }
   
   .card-luxury {
-    @apply bg-surface rounded-xl border border-border p-6 transition-all duration-400 ease-out hover:shadow-xl hover:-translate-y-2;
+    @apply bg-surface rounded-xl border border-border p-6 transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-2;
   }
   
   /* Inputs */
