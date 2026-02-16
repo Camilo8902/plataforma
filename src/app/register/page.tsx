@@ -18,7 +18,6 @@ export default function RegisterPage() {
     lastName: '',
   });
 
-  const router = useRouter();
   const supabase = createClient();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
