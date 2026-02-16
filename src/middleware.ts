@@ -1,4 +1,4 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
+import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
 export async function middleware(request: NextRequest) {
@@ -17,7 +17,7 @@ export async function middleware(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
+          cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
           );
           response = NextResponse.next({
@@ -34,7 +34,7 @@ export async function middleware(request: NextRequest) {
   );
 
   // Refresh session if expired
-  const { data: { user } } = await supabase.auth.getUser();
+  await supabase.auth.getUser();
 
   // Get the pathname
   const { pathname } = request.nextUrl;
@@ -43,16 +43,16 @@ export async function middleware(request: NextRequest) {
   const protectedRoutes = ['/admin', '/dashboard', '/settings'];
   const authRoutes = ['/login', '/register', '/forgot-password'];
 
-  // Check if user is authenticated
-  const isAuthenticated = !!user;
+  // Check if user is authenticated by checking for auth token
+  const hasAuthCookie = request.cookies.has('sb-access-token');
 
   // Redirect authenticated users away from auth pages
-  if (isAuthenticated && authRoutes.some(route => pathname.startsWith(route))) {
+  if (hasAuthCookie && authRoutes.some(route => pathname.startsWith(route))) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
   // Redirect unauthenticated users to login from protected routes
-  if (!isAuthenticated && protectedRoutes.some(route => pathname.startsWith(route))) {
+  if (!hasAuthCookie && protectedRoutes.some(route => pathname.startsWith(route))) {
     const redirectUrl = new URL('/login', request.url);
     redirectUrl.searchParams.set('redirect', pathname);
     return NextResponse.redirect(redirectUrl);
