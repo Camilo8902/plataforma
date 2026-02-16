@@ -109,10 +109,10 @@ export default function LoginPage() {
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="font-display text-xl text-text-inverse font-bold">M</span>
+            <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+              <span className="font-display text-xl text-[#1B4D3E] font-bold">M</span>
             </div>
-            <span className="font-display text-2xl font-bold text-primary">MultiVend</span>
+            <span className="font-display text-2xl font-bold text-white">MultiVend</span>
           </div>
           
           <div className="text-center mb-8">
