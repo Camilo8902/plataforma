@@ -23,7 +23,7 @@ export default function TenantRegisterSuccessPage() {
         </p>
         
         <div className="p-6 bg-surface rounded-xl border border-border mb-8 text-left">
-          <h3 className="font-semibold text-text-primary mb-4">What's next?</h3>
+          <h3 className="font-semibold text-text-primary mb-4">What&apos;s next?</h3>
           <ul className="space-y-3">
             {[
               'Check your email for verification',

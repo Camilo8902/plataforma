@@ -52,7 +52,7 @@ export default function TenantRegisterPage() {
       if (data) setPlans(data);
     };
     fetchPlans();
-  }, []);
+  }, [supabase]);
 
   const [formData, setFormData] = useState({
     // Step 1: Company

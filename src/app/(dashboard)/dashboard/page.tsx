@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { createClient } from '@/lib/supabase/server';
 import { requireAuth, getUserProfile } from '@/lib/auth';
 import { 
@@ -51,7 +52,7 @@ function StatsCard({
 }
 
 export default async function TenantDashboard() {
-  const user = await requireAuth();
+  await requireAuth();
   const profile = await getUserProfile();
   const supabase = await createClient();
 
@@ -76,7 +77,7 @@ export default async function TenantDashboard() {
 
   // Fetch tenant data if user has a tenant
   let tenant = null;
-  let stats = {
+  const stats = {
     products: 0,
     orders: 0,
     customers: 0,
@@ -102,7 +103,7 @@ export default async function TenantDashboard() {
           Dashboard
         </h1>
         <p className="text-text-secondary mt-1">
-          Welcome back! Here's an overview of your store.
+          Welcome back! Here&apos;s an overview of your store.
         </p>
       </div>
 
@@ -127,10 +128,12 @@ export default async function TenantDashboard() {
           {/* Tenant Info */}
           <div className="card p-6 flex items-center gap-6">
             {tenant.logo_url && (
-              <img 
-                src={tenant.logo_url} 
-                alt={tenant.name} 
-                className="w-16 h-16 rounded-xl object-cover"
+              <Image
+                src={tenant.logo_url}
+                alt={tenant.name}
+                width={64}
+                height={64}
+                className="rounded-xl object-cover"
               />
             )}
             <div className="flex-1">

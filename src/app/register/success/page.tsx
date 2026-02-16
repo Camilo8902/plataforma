@@ -26,12 +26,12 @@ export default function RegisterSuccessPage() {
         </h1>
         
         <p className="text-text-secondary mb-8">
-          We've sent a verification link to{' '}
+          We&apos;ve sent a verification link to{' '}
           <span className="font-semibold text-text-primary">{email || 'your email'}</span>
         </p>
         
         <div className="p-6 bg-surface rounded-xl border border-border mb-8">
-          <h3 className="font-semibold text-text-primary mb-4">What's next?</h3>
+          <h3 className="font-semibold text-text-primary mb-4">What&apos;s next?</h3>
           <ul className="text-left text-text-secondary space-y-3">
             <li className="flex items-start gap-3">
               <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -59,7 +59,7 @@ export default function RegisterSuccessPage() {
         </Link>
         
         <p className="mt-6 text-sm text-text-muted">
-          Did't receive the email?{' '}
+          Didn&apos;t receive the email?{' '}
           <button className="text-primary hover:text-primary-light font-medium">
             Resend verification
           </button>
