@@ -30,18 +30,26 @@ export default function LoginPage() {
       // Redirect based on role
       if (data.user) {
         // Fetch user role from database
-        const { data: userData } = await supabase
-          .from('users')
-          .select('role, tenant_id, is_superadmin')
-          .eq('id', data.user.id)
-          .single();
+        let userData = null;
+        try {
+          const { data: profileData } = await supabase
+            .from('users')
+            .select('role, tenant_id, is_superadmin')
+            .eq('id', data.user.id)
+            .single();
+          userData = profileData;
+        } catch (e) {
+          // Table might not exist yet, use default values
+          console.log('Users table not found, using defaults');
+        }
 
         if (userData?.is_superadmin || userData?.role === 'superadmin') {
           router.push('/admin');
         } else if (userData?.tenant_id) {
           router.push('/dashboard');
         } else {
-          router.push('/');
+          // Default redirect - user exists but has no profile yet
+          router.push('/dashboard');
         }
       }
     } catch (err) {
