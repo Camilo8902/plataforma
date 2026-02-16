@@ -116,7 +116,7 @@ export default async function TenantDashboard() {
             Set Up Your Store
           </h2>
           <p className="text-text-secondary mb-6 max-w-md mx-auto">
-            You haven't created a store yet. Create your store to start selling products and services.
+            You haven&apos;t created a store yet. Create your store to start selling products and services.
           </p>
           <a href="/register/tenant" className="btn-primary">
             Create Your Store
