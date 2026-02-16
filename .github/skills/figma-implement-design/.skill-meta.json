@@ -1,0 +1,8 @@
+{
+  "name": "figma-implement-design",
+  "source": "openai-skills",
+  "description": "Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation).",
+  "description_ja": "",
+  "categories": [],
+  "installedAt": "2026-02-16T03:41:12.504Z"
+}

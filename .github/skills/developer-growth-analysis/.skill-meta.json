@@ -1,0 +1,11 @@
+{
+  "name": "developer-growth-analysis",
+  "source": "composio-awesome",
+  "description": "Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a p...",
+  "description_ja": "Developer Growth Analysis",
+  "whenToUse": "This skill provides personalized feedback on your recent coding work by analyzing your Claude Code chat interactions and identifying patterns that reveal strengths and areas for growth.",
+  "categories": [
+    "community"
+  ],
+  "installedAt": "2026-02-16T03:41:40.856Z"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "stripe-automation",
+  "source": "composio-awesome",
+  "description": "Automate Stripe tasks via Rube MCP (Composio): customers, charges, subscriptions, invoices, products, refunds. Always search tools first for current schemas.",
+  "description_ja": "",
+  "whenToUse": "Automate Stripe payment operations through Composio's Stripe toolkit via Rube MCP.",
+  "categories": [],
+  "installedAt": "2026-02-16T03:41:51.953Z"
+}
