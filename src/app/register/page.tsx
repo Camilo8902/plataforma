@@ -88,7 +88,7 @@ export default function RegisterPage() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Check Your Email</h2>
             <p className="text-gray-600 mb-6">
-              We've sent a verification link to <strong>{formData.email}</strong>
+              We&apos;ve sent a verification link to <strong>{formData.email}</strong>
             </p>
             <Link href="/login" className="block w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
               Go to Login
