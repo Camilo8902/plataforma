@@ -19,7 +19,7 @@ export default function TenantRegisterSuccessPage() {
         </h1>
         
         <p className="text-text-secondary mb-8">
-          Your store has been created and is pending approval. We'll send you an email once your store is active.
+          Your store has been created and is pending approval. We&apos;ll send you an email once your store is active.
         </p>
         
         <div className="p-6 bg-surface rounded-xl border border-border mb-8 text-left">

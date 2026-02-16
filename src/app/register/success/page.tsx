@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 export default function RegisterSuccessPage() {
-  const email = 'your email';
+  const searchParams = useSearchParams();
+  const email = searchParams.get('email') || '';
 
   return (
     <div className="min-h-screen bg-background relative flex items-center justify-center px-8">
@@ -24,7 +26,8 @@ export default function RegisterSuccessPage() {
         </h1>
         
         <p className="text-text-secondary mb-8">
-          We've sent a verification link to your email address.
+          We've sent a verification link to{' '}
+          <span className="font-semibold text-text-primary">{email || 'your email'}</span>
         </p>
         
         <div className="p-6 bg-surface rounded-xl border border-border mb-8">

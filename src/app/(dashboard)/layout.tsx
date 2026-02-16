@@ -9,8 +9,7 @@ import {
   Settings, 
   BarChart3,
   LogOut,
-  Menu,
-  X
+  Menu
 } from 'lucide-react';
 import { logout } from '@/lib/auth';
 
