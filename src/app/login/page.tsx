@@ -25,32 +25,22 @@ export default function LoginPage() {
         password,
       });
 
-      if (signInError) throw signInError;
+      if (signInError) {
+        // Provide more user-friendly error messages
+        if (signInError.message.includes('Invalid login credentials')) {
+          setError('Invalid email or password. Please try again.');
+        } else if (signInError.message.includes('Email not confirmed')) {
+          setError('Please verify your email address before logging in.');
+        } else {
+          setError(signInError.message);
+        }
+        return;
+      }
 
       // Redirect based on role
       if (data.user) {
-        // Fetch user role from database
-        let userData = null;
-        try {
-          const { data: profileData } = await supabase
-            .from('users')
-            .select('role, tenant_id, is_superadmin')
-            .eq('id', data.user.id)
-            .single();
-          userData = profileData;
-        } catch {
-          // Table might not exist yet, use default values
-          console.log('Users table not found, using defaults');
-        }
-
-        if (userData?.is_superadmin || userData?.role === 'superadmin') {
-          router.push('/admin');
-        } else if (userData?.tenant_id) {
-          router.push('/dashboard');
-        } else {
-          // Default redirect - user exists but has no profile yet
-          router.push('/dashboard');
-        }
+        // Skip user profile query - redirect directly to dashboard
+        router.push('/dashboard');
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
