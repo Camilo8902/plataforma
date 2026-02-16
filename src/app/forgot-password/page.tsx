@@ -47,7 +47,7 @@ export default function ForgotPasswordPage() {
               Check Your Email
             </h2>
             <p className="text-white/80 mb-8">
-              We've sent a password reset link to <strong>{email}</strong>
+              We&apos;ve sent a password reset link to <strong>{email}</strong>
             </p>
             
             <Link href="/login" className="inline-block px-6 py-3 bg-white text-[#1B4D3E] font-medium rounded-lg hover:bg-gray-100 transition-colors">
@@ -76,7 +76,7 @@ export default function ForgotPasswordPage() {
               Reset Password
             </h2>
             <p className="text-white/80">
-              Enter your email and we'll send you a reset link
+              Enter your email and we&apos;ll send you a reset link
             </p>
           </div>
 

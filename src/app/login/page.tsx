@@ -38,7 +38,7 @@ export default function LoginPage() {
             .eq('id', data.user.id)
             .single();
           userData = profileData;
-        } catch (e) {
+        } catch {
           // Table might not exist yet, use default values
           console.log('Users table not found, using defaults');
         }
