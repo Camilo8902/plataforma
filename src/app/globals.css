@@ -101,7 +101,8 @@
   }
   
   .btn-primary {
-    @apply btn bg-primary text-text-inverse hover:bg-primary-light focus:ring-primary shadow-md hover:shadow-lg hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply bg-[#1B4D3E] text-white hover:bg-[#2D7A5F] focus:ring-[#1B4D3E] shadow-md hover:shadow-lg hover:-translate-y-0.5;
   }
   
   .btn-secondary {

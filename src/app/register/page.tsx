@@ -150,7 +150,7 @@ export default function RegisterPage() {
       </div>
       
       {/* Right Panel - Register Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12 bg-surface">
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center gap-2 mb-8">
@@ -161,10 +161,10 @@ export default function RegisterPage() {
           </div>
           
           <div className="text-center mb-8">
-            <h2 className="font-display text-3xl font-bold text-text-primary mb-2">
+            <h2 className="font-display text-3xl font-bold text-[#1A1A1A] mb-2">
               Create Account
             </h2>
-            <p className="text-text-secondary">
+            <p className="text-[#5C5C5C]">
               Step {step} of 2
             </p>
             
@@ -176,7 +176,7 @@ export default function RegisterPage() {
           </div>
 
           {error && (
-            <div className="mb-6 p-4 bg-error/10 border border-error/20 rounded-lg text-error text-sm">
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
               {error}
             </div>
           )}
@@ -229,7 +229,7 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="btn-primary w-full py-3 text-lg"
+                className="w-full py-3 px-4 bg-[#1B4D3E] text-white font-medium rounded-lg hover:bg-[#2D7A5F] focus:outline-none focus:ring-2 focus:ring-[#1B4D3E] focus:ring-offset-2 transition-all duration-200"
               >
                 Continue
               </button>
@@ -284,7 +284,7 @@ export default function RegisterPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="btn-primary w-full py-3 text-lg"
+                className="w-full py-3 px-4 bg-[#1B4D3E] text-white font-medium rounded-lg hover:bg-[#2D7A5F] focus:outline-none focus:ring-2 focus:ring-[#1B4D3E] focus:ring-offset-2 transition-all duration-200 disabled:opacity-50"
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">
@@ -302,16 +302,16 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="btn-ghost w-full"
+                className="w-full py-2 px-4 text-[#5C5C5C] hover:bg-[#F5F5F5] rounded-lg transition-colors"
               >
                 Back
               </button>
             </form>
           )}
 
-          <p className="mt-8 text-center text-text-secondary">
+          <p className="mt-8 text-center text-[#5C5C5C]">
             Already have an account?{' '}
-            <Link href="/login" className="text-primary font-semibold hover:text-primary-light">
+            <Link href="/login" className="text-[#1B4D3E] font-semibold hover:text-[#2D7A5F]">
               Sign in
             </Link>
           </p>
