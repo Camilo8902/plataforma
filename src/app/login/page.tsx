@@ -116,10 +116,10 @@ export default function LoginPage() {
           </div>
           
           <div className="text-center mb-8">
-            <h2 className="font-display text-3xl font-bold text-text-primary mb-2">
+            <h2 className="font-display text-3xl font-bold text-black mb-2">
               Welcome Back
             </h2>
-            <p className="text-text-secondary">
+            <p className="text-black">
               Sign in to your account to continue
             </p>
           </div>
@@ -132,7 +132,7 @@ export default function LoginPage() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="email" className="label">
+              <label htmlFor="email" className="block text-sm font-medium text-black mb-1">
                 Email Address
               </label>
               <input
@@ -148,10 +148,10 @@ export default function LoginPage() {
 
             <div>
               <div className="flex items-center justify-between mb-2">
-                <label htmlFor="password" className="label mb-0">
+                <label htmlFor="password" className="block text-sm font-medium text-black mb-0">
                   Password
                 </label>
-                <Link href="/forgot-password" className="text-sm text-primary hover:text-primary-light">
+                <Link href="/forgot-password" className="text-sm text-black hover:underline">
                   Forgot password?
                 </Link>
               </div>
@@ -172,7 +172,7 @@ export default function LoginPage() {
                 type="checkbox"
                 className="w-4 h-4 rounded border-border text-primary focus:ring-primary/20"
               />
-              <label htmlFor="remember-me" className="ml-2 text-sm text-text-secondary">
+              <label htmlFor="remember-me" className="ml-2 text-sm text-black">
                 Remember me for 30 days
               </label>
             </div>
@@ -199,10 +199,10 @@ export default function LoginPage() {
           <div className="mt-8">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-[#D4CFC6]" />
+                <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-surface text-[#5C5C5C]">Or continue with</span>
+                <span className="px-4 bg-[#F5F5F5] text-black">Or continue with</span>
               </div>
             </div>
 

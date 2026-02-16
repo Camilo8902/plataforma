@@ -161,10 +161,10 @@ export default function RegisterPage() {
           </div>
           
           <div className="text-center mb-8">
-            <h2 className="font-display text-3xl font-bold text-[#1A1A1A] mb-2">
+            <h2 className="font-display text-3xl font-bold text-black mb-2">
               Create Account
             </h2>
-            <p className="text-[#5C5C5C]">
+            <p className="text-black">
               Step {step} of 2
             </p>
             
@@ -309,9 +309,9 @@ export default function RegisterPage() {
             </form>
           )}
 
-          <p className="mt-8 text-center text-[#5C5C5C]">
+          <p className="mt-8 text-center text-black">
             Already have an account?{' '}
-            <Link href="/login" className="text-[#1B4D3E] font-semibold hover:text-[#2D7A5F]">
+            <Link href="/login" className="text-black font-semibold underline">
               Sign in
             </Link>
           </p>
