@@ -171,6 +171,25 @@
            hover:after:w-full;
   }
   
+  /* Sidebar */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary 
+           font-medium transition-all duration-300 relative;
+  }
+  
+  .sidebar-item:hover {
+    @apply bg-primary/5 text-primary;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-primary/10 text-primary;
+  }
+  
+  .sidebar-item.active::before {
+    content: '';
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-secondary rounded-r-full;
+  }
+  
   /* Art Deco Elements */
   .art-deco-border {
     @apply relative;
