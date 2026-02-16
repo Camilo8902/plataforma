@@ -52,8 +52,10 @@ const config: Config = {
         info: "#1B4D3E",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "monospace"],
+        display: ["var(--font-cinzel)", "serif"],
+        body: ["var(--font-outfit)", "sans-serif"],
+        sans: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        mono: ["monospace"],
       },
       spacing: {
         "18": "4.5rem",
