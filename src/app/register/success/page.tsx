@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function RegisterSuccessPage() {
+function RegisterSuccessContent() {
   const searchParams = useSearchParams();
   const email = searchParams.get('email') || '';
 
@@ -66,5 +67,13 @@ export default function RegisterSuccessPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+export default function RegisterSuccessPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center"><div className="animate-pulse">Loading...</div></div>}>
+      <RegisterSuccessContent />
+    </Suspense>
   );
 }
