@@ -103,13 +103,9 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background relative flex">
-      {/* Background Effects */}
-      <div className="fixed inset-0 bg-mesh pointer-events-none" />
-      <div className="fixed inset-0 bg-texture pointer-events-none" />
-      
+    <div className="min-h-screen flex" style={{ backgroundColor: '#1B4D3E' }}>
       {/* Left Panel - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-primary relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#1B4D3E' }}>
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-primary" />
         <div className="absolute inset-0 art-deco-bg opacity-10" />
         
@@ -150,7 +146,7 @@ export default function RegisterPage() {
       </div>
       
       {/* Right Panel - Register Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12 bg-[#1B4D3E]">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12" style={{ backgroundColor: '#1B4D3E' }}>
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center gap-2 mb-8">
