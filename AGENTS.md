@@ -13,6 +13,7 @@
 | [figma-implement-design](.github/skills/figma-implement-design/SKILL.md) | Translate Figma nodes into production-ready code with 1:1 visual fidelity using the Figma MCP workflow (design context, screenshots, assets, and project-convention translation). |
 | [frontend-design](.github/skills/frontend-design/SKILL.md) | Create distinctive, production-grade frontend interfaces with high design quality. |
 | [stripe-automation](.github/skills/stripe-automation/SKILL.md) | Automate Stripe tasks via Rube MCP (Composio): customers, charges, subscriptions, invoices, products, refunds. A... \| Automate Stripe payment operations through Composio's Stripe toolkit via Rube MCP. |
+| [vercel-automation](.github/skills/vercel-automation/SKILL.md) | Automate Vercel tasks via Rube MCP (Composio): manage deployments, domains, DNS, env vars, projects, and teams.... \| Automate Vercel platform operations through Composio's Vercel toolkit via Rube MCP. |
 | [vercel-deploy](.github/skills/vercel-deploy/SKILL.md) | Deploy applications and websites to Vercel. Use when the user requests deployment actions like "d... \| Deploy any project to Vercel instantly. **Always deploy as preview** (not production) unless the ... |
 
 <!-- skill-ninja-END -->

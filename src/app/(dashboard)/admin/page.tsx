@@ -6,7 +6,6 @@ import {
   Package, 
   DollarSign, 
   TrendingUp, 
-  TrendingDown,
   ArrowUpRight,
   ArrowDownRight
 } from 'lucide-react';
@@ -114,7 +113,7 @@ export default async function AdminDashboard() {
           Admin Dashboard
         </h1>
         <p className="text-text-secondary mt-1">
-          Welcome back! Here's an overview of your platform.
+          Welcome back! Here&apos;s an overview of your platform.
         </p>
       </div>
 

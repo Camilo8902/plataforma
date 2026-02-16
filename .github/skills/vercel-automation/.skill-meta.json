@@ -1,0 +1,9 @@
+{
+  "name": "vercel-automation",
+  "source": "composio-awesome",
+  "description": "Automate Vercel tasks via Rube MCP (Composio): manage deployments, domains, DNS, env vars, projects, and teams. Always search tools first for current schemas.",
+  "description_ja": "",
+  "whenToUse": "Automate Vercel platform operations through Composio's Vercel toolkit via Rube MCP.",
+  "categories": [],
+  "installedAt": "2026-02-16T05:18:02.915Z"
+}

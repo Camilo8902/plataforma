@@ -1,19 +1,30 @@
 import { createClient } from '@/lib/supabase/server';
 import { requireSuperadmin } from '@/lib/auth';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   Users, 
   Search, 
-  Filter,
-  MoreVertical,
   Check,
-  X,
   Pause,
   Play,
   Eye,
-  Edit,
-  Trash2
+  Edit
 } from 'lucide-react';
+
+// Types
+interface TenantWithPlan {
+  id: string;
+  name: string;
+  email: string;
+  logo_url: string | null;
+  status: string;
+  commission_percentage: number;
+  created_at: string;
+  plans: {
+    name: string;
+  } | null;
+}
 
 // Status Badge Component
 function StatusBadge({ status }: { status: string }) {
@@ -65,7 +76,7 @@ export default async function TenantsPage({
   const to = from + pageSize - 1;
   
   const { data: tenants, count } = await query
-    .range(from, to);
+    .range(from, to) as { data: TenantWithPlan[] | null; count: number | null };
 
   const totalPages = Math.ceil((count || 0) / pageSize);
 
@@ -160,13 +171,19 @@ export default async function TenantsPage({
               </tr>
             </thead>
             <tbody>
-              {tenants?.map((tenant) => (
+              {tenants?.map((tenant: TenantWithPlan) => (
                 <tr key={tenant.id} className="border-b border-border hover:bg-surface-elevated/50">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         {tenant.logo_url ? (
-                          <img src={tenant.logo_url} alt={tenant.name} className="w-10 h-10 rounded-lg object-cover" />
+                          <Image 
+                            src={tenant.logo_url} 
+                            alt={tenant.name} 
+                            width={40}
+                            height={40}
+                            className="rounded-lg object-cover" 
+                          />
                         ) : (
                           <span className="text-primary font-semibold">
                             {tenant.name.charAt(0).toUpperCase()}
@@ -181,7 +198,7 @@ export default async function TenantsPage({
                   </td>
                   <td className="px-6 py-4">
                     <span className="text-text-secondary">
-                      {(tenant as any).plans?.name || 'Free'}
+                      {tenant.plans?.name || 'Free'}
                     </span>
                   </td>
                   <td className="px-6 py-4">
