@@ -150,7 +150,7 @@ export default function RegisterPage() {
       </div>
       
       {/* Right Panel - Register Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12 bg-surface">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-12 bg-[#F5F5F5]">
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center gap-2 mb-8">
