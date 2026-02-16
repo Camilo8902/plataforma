@@ -97,29 +97,23 @@
 @layer components {
   /* Buttons */
   .btn {
-    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 
-           font-medium transition-all duration-200 cursor-pointer
-           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
   
   .btn-primary {
-    @apply btn bg-primary text-text-inverse hover:bg-primary-light
-           focus:ring-primary shadow-md hover:shadow-lg hover:-translate-y-0.5;
+    @apply btn bg-primary text-text-inverse hover:bg-primary-light focus:ring-primary shadow-md hover:shadow-lg hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply btn bg-secondary text-text-primary hover:bg-secondary-light
-           focus:ring-secondary;
+    @apply btn bg-secondary text-text-primary hover:bg-secondary-light focus:ring-secondary;
   }
   
   .btn-accent {
-    @apply btn bg-accent text-text-inverse hover:bg-accent-light
-           focus:ring-accent;
+    @apply btn bg-accent text-text-inverse hover:bg-accent-light focus:ring-accent;
   }
   
   .btn-outline {
-    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-text-inverse
-           focus:ring-primary;
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-text-inverse focus:ring-primary;
   }
   
   .btn-ghost {
@@ -140,17 +134,12 @@
   }
   
   .card-luxury {
-    @apply bg-surface rounded-xl border border-border p-6 
-           transition-all duration-400 ease-out
-           hover:shadow-xl hover:-translate-y-2 hover:border-secondary/30;
+    @apply bg-surface rounded-xl border border-border p-6 transition-all duration-400 ease-out hover:shadow-xl hover:-translate-y-2;
   }
   
   /* Inputs */
   .input {
-    @apply w-full rounded-lg border border-border bg-surface px-4 py-3
-           text-text-primary placeholder:text-text-muted
-           focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20
-           transition-all duration-200;
+    @apply w-full rounded-lg border border-border bg-surface px-4 py-3 text-text-primary placeholder:text-text-muted focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all duration-200;
   }
   
   .label {
@@ -158,23 +147,26 @@
   }
   
   .link {
-    @apply text-primary hover:text-primary-light underline-offset-4
-           hover:underline transition-colors duration-200;
+    @apply text-primary hover:text-primary-light underline-offset-4 hover:underline transition-colors duration-200;
   }
   
   /* Navigation */
   .nav-link {
-    @apply text-text-secondary hover:text-primary 
-           relative after:absolute after:bottom-0 after:left-0 
-           after:w-0 after:h-0.5 after:bg-secondary 
-           after:transition-all after:duration-300
-           hover:after:w-full;
+    @apply text-text-secondary hover:text-primary relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
   }
   
   /* Sidebar */
   .sidebar-item {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary 
-           font-medium transition-all duration-300 relative;
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary font-medium transition-all duration-300 relative;
   }
   
   .sidebar-item:hover {
@@ -252,15 +244,6 @@
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
     }
   }
   
